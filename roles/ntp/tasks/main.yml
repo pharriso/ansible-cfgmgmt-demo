@@ -5,15 +5,16 @@
     name: chrony
     state: installed
 
-- name: Start & Enable chrony
-  service:
-    name: chronyd
-    state: started
-    enabled: true
-
 - name: Template out chrony.conf
   template:
     src: chrony.conf.j2
     dest: /etc/chrony.conf
   notify:
     - restart chrony
+
+- name: Start & Enable chrony
+  service:
+    name: chronyd
+    state: started
+    enabled: true
+
