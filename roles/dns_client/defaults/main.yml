@@ -1,2 +1,2 @@
 dns_search: example.com
-dns_server: 8.8.8.8
+dns_server_list: 8.8.8.8
