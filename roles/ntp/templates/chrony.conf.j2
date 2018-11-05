@@ -1,6 +1,5 @@
-# Use public servers from the pool.ntp.org project.
-# Please consider joining the pool (http://www.pool.ntp.org/join.html).
 # {{ ansible_managed }}
+
 search {{ dns_search }}
 {% for server in ntp_server_list %}
 server {{ server }} iburst
