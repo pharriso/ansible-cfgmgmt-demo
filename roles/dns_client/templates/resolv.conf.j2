@@ -1,5 +1,5 @@
 # This file is managed by Ansible.
 search {{ dns_search }}
-(% for dns_server in {{ dns_servers }} %)
-server {{ dns_server }}
+(% for server in {{ dns_server }} %)
+server {{ server }}
 (% endfor %)
