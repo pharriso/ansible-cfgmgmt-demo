@@ -4,3 +4,4 @@
   roles:
     - motd
     - dns_client
+    - ntp
