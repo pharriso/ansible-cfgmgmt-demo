@@ -4,6 +4,7 @@
   yum:
     name: chrony
     state: installed
+  tags: ntp
 
 - name: Template out chrony.conf
   template:
@@ -11,10 +12,12 @@
     dest: /etc/chrony.conf
   notify:
     - restart chrony
+  tags: ntp
 
 - name: Start & Enable chrony
   service:
     name: chronyd
     state: started
     enabled: true
+  tags: ntp
 

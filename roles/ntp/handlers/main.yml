@@ -4,3 +4,4 @@
   service:
     name: chronyd
     state: restarted
+  tags: ntp
